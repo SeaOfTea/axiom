@@ -1,10 +1,8 @@
-export default () => {
-  require("./animations.css");
-  require("./colors.css");
-  require("./layout.css");
-  require("./opacities.css");
-  require("./sizing.css");
-  require("./theme-day.css");
-  require("./theme-night.css");
-  require("./typography.css");
-};
+import "./animations.css";
+import "./colors.css";
+import "./layout.css";
+import "./opacities.css";
+import "./sizing.css";
+import "./theme-day.css";
+import "./theme-night.css";
+import "./typography.css";

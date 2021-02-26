@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import classnames from "classnames";
-import { importCssVariables } from "@brandwatch/axiom-materials";
+import "@brandwatch/axiom-materials/dist/esm/index.css";
 import "./globals.css";
-importCssVariables();
 import "./Base.css";
 
 const underlineTextSizes = new Set([

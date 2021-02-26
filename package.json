@@ -5,6 +5,7 @@
     "build:cjs:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_packages.sh",
     "build:esm:packages": "NODE_ENV=production BABEL_ENV=production bash ./scripts/build_esm_packages.sh",
     "build:packages": "yarn build:cjs:packages && yarn build:esm:packages",
+    "build:rollup": "rollup -c rollup.config.js",
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint 'packages/**/*.css'",
     "lint:js": "eslint --config .eslintrc packages",
@@ -31,6 +32,10 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@commitlint/config-conventional": "^8.3.4",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
     "@storybook/addon-a11y": "6.1.1",
     "@storybook/addon-controls": "6.1.1",
     "@storybook/addon-docs": "6.1.1",
@@ -79,9 +84,12 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-test-renderer": "^17.0.1",
+    "rollup": "^2.39.1",
+    "rollup-plugin-postcss": "^4.0.0",
     "style-loader": "^0.13.1",
     "stylelint": "^7.9.0",
     "stylelint-order": "^0.6.0",
     "validate-commit": "^3.4.0"
-  }
+  },
+  "dependencies": {}
 }
