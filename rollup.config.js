@@ -67,4 +67,35 @@ export default [
       "prop-types",
     ],
   },
+  {
+    input: "./packages/axiom-composites/src/index.js",
+    output: [
+      {
+        dir: "./packages/axiom-composites/dist/cjs",
+        format: "cjs",
+      },
+      {
+        dir: "./packages/axiom-composites/dist/esm",
+        format: "esm",
+      },
+    ],
+    plugins: [
+      postcss({
+        plugins: [],
+        extract: true,
+      }),
+      babel({
+        babelHelpers: "bundled",
+      }),
+      json(),
+      nodeResolve(),
+      commonjs(),
+    ],
+    external: [
+      "react",
+      "react-dom",
+      "@brandwatch/axiom-components",
+      "prop-types",
+    ],
+  },
 ];
